@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <header>
+               <h1>Palavra 1.0 Documentation</h1>
+            </header>
+
+        <nav>
+          <ul>
+            <li id="first"><a onclick="displayContent('whatIsArticle')" href="#">What is?</a></li>
+            <li><a onclick="displayContent('default')" href="#"> General Info / Downloads</a></li>
+            <li><a onclick="displayContent('howToUseArticle')" href="#"> How to use?</a></li>
+            <li><a onclick="displayContent('designArticle')" href="#">The design process</a></li>
+            <li><a onclick="displayContent('sourceArticle')" href="#">Source code</a></li>
+          </ul>
+        </nav>
+        <div id="articleBox">
+        <article id = "default">
+            <h2>Welcome to the Documentation of Palavra</h2>
+            <p>Click the links on the left to navigate in this document</p>
+            <p>You can download the zip with the executable Jar and the dictionaries for Palavra 1.0 here: <a href="http://www.henriquerodrigues.com/palavra100.zip">Download</a></p>
+            <p>All the dicitonaries used where found online in the websites you have more information about them</p>
+            <p>The english dictionaries here: <a href= "http://www.keithv.com/software/wlist/">Combination of 10 big sites General Words</a> and <a href = "http://deron.meranda.us/data/census-derived-all-first.txt">Males/Female Names</a></p>
+            <p>The russian dictionaries here: <a href="http://www.outpost9.com/files/WordLists.html">CRL Names and Given names</a></p>
+            <p>The portuguese dictionaries here: <a href="http://natura.di.uminho.pt/download/sources/Dictionaries/wordlists/">The one with 8mb from this page</a></p>
+            <p></p>
+        </article>
+        <article id = "whatIsArticle">
+            <h2>What is Palavra?</h2>
+            <h3>An anagram/Pangram/Palidrome checker and generator</h3>
+            <p>The idea behind palavra was only an College Assignment, that required a String inverser, splitter, palindrome and panagram checker.</p>
+            <p>But I want to do more, so I made a Graphic User Interface, and inputed some new functions, with plenty more to come, if I don't retire from this project.</p>
+            <h3>The Name</h3>
+            <p>Palavra means Word in portuguese, and besides that the anagrams for palavra give some very funny words in Portuguese and Italian, so the Slogan is: a software that Parlava (past tense of speak in Italian) a Palavar(A series of words that don't make much sense) of Palrava(words without much meaning). Last both are in Portuguese</p>
+            <p></p>
+        </article>
+        <article id = "howToUseArticle">
+          <h2>How to use Palavra 1.0</h2>
+            <h3>This is the look of Palavra:</h3>
+            <img src="imgs/palavraSS.jpg">
+            <p>You need the last version of java to be installed in your machine to be able to use Palavra you can get a copy <a href="http://java.com/download/">here:</a></p>
+            <h3>This is what each part of Palavra does:</h3>
+            <img src="imgs/palavraSSExplained.jpg">
+            <ul id = "functionsList">
+                <li>1. This is the Text Field where you are expected to input anything you want to test with the software, You can input as many words as you want, but too many words can be slow to process on old computers</li>
+                <li>2. This is the are where you will select the processes. You can select one at a time, but as many as you want before closing the application.</li>
+                <li>3. Those are the Dictionaries, with all Dictionaries Selected your computer will process 2.8 million words, using some tricks this is feasible even on older computers, but can take a while (8 seconds in a modern i7, 32 GB RAM, computer for example). The quality of the words vary great if you select too many dictionaries tough, as some of the dictionaries are full of typos, misspells and made up words.</li>
+                <li>4. The General English dictionary, this select if you want any english in the Software </li>
+                <li>5. This slide bar will select between 10 english dictionaries, as more to the left, you should expect less words, but all will be very common, to the right, there will be millions of words, most of them being typos, or made up words. This bar will have no use if the General English box is not ticked. </li>
+                <li>6. A very big dictionary of portuguese words</li>
+                <li>7. ~5000 United States First names</li>
+                <li>8. ~88000 United States Last Names</li>
+                <li>9. ~53000 CIS (Commonwealth of Independent States) names, this mean Ex-URSS</li>
+                <li>10. ~37000 CIS Last Names</li>
+                <li>11. This button expect a input of a phrase, or a word and an optional number and will run some tests giving back a result as follows:
+                    
+                    <img src="imgs/palavraassigresult.jpg">
+                    <p class="subLi">The input was:</p>
+                    <p class="subLi">The quick brown fox jumps over a lazy dog 8</p>
+                    <p class="subLi">The Output:</p>
+                    <p class="subLi">The first line will tell if the input was a Pangram, if it wasn't this line will be omited</p>
+                    <p class="subLi">From now on, the output will show each word, and if it was a Palindrome, in this case, only a is detected as a Palindrome, for all words that have its position in the phrase as a multiple of the inputed number, the output will reverse it. if the input has more than 1 number, just the last one will be considered.</p>
+                    <p class="subLi">if the number was greater than the amount of words in the phrase the last line of the output will tell you. The output will ignore anything that is not a letter, a number or a -</p>
+                </li>   
+                <li>12. This will use the dictionaries selected to generate the inputed number (between 1 and 9) of words, if no input is given it will generate 3 words.</li>
+                <li>13. This button will give back random anagrams of the whole phrase (not yet implemented)</li>
+                <li>14. This button will give back one famous Pangram, and on the future generate Pangrams from the user input</li>
+                <li>15. both the top button as the bottom one (or F1) will show this documentation in the user default browser</li>
+                <li>16. If this box is selected the program will give back some information about the time that the dictionaries took to be handled and the user input, this was used for debugging</li>
+                <li>17. If this box is selected the output of the software will be copied to the user Clipboard, (Control + C) you can use (Control+ v) to past it out.</li>
+            </ul>
+        </article>
+        <article id = "designArticle">
+          <h2>The Design of Palavra</h2>
+            <h3>This diagram show the process of design the Assigment Test for Palavra</h3>
+            <img id="pdfPalavra" src="imgs/palavraReverEngenieer2-0.jpg">
+            <p>All the other methods follow the same basic principles</p>
+            <p></p>
+        </article>
+        <article id = "sourceArticle">
+          <h2>The Source code for Palavra</h2>
+            <h3>Java files</h3>
+            <p>This will only been avaiable after Claire Authorization</p>
+            <h3>The code for this documentataion website</h3>
+            <p>Get it <a href="http://www.henriquerodrigues.com/palavra/documentWebsite.zip">Here</a></p>
+            <p></p>
+        </article>
+        </div>
+        </div>
+
+        <footer>Copyright 2017 &copy; henriquerodrigues.com</footer>
+        
+
+    </body>
+</html>
